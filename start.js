@@ -1,57 +1,50 @@
-define(["@beyond-js/kernel/bundle", "@beyond-js/kernel/transversals", "@beyond-js/widgets/render", "@beyond-js/kernel/routing"], function (dependency_0, dependency_1, dependency_2, dependency_3) {
+System.register(["@beyond-js/kernel@0.1.0/bundle", "@beyond-js/kernel@0.1.0/transversals", "@beyond-js/widgets@0.1.0/render"], function (_export, _context) {
   "use strict";
 
-  const {
-    Transversal
-  } = brequire('@beyond-js/kernel/transversals');
-  const transversal = new Transversal('start', '');
-  /*************
-  BUNDLE: WIDGET
-  *************/
+  var dependency_0, dependency_1, dependency_2, Transversal, __beyond_transversal, widgets, bundles;
 
-  const {
-    widgets
-  } = brequire('@beyond-js/widgets/render');
-  widgets.register([{
-    "name": "home-page",
-    "id": "@beyond-examples/ssr/home",
-    "is": "page",
-    "route": "/"
-  }, {
-    "name": "entries-ssr-page",
-    "id": "@beyond-examples/ssr/entries-ssr",
-    "is": "page",
-    "render": {
-      "ssr": true
-    },
-    "route": "/entries-ssr"
-  }]);
-  const bundles = new Map();
-  /**********************
-  MODULE: unnamed/routing
-  **********************/
+  return {
+    setters: [function (_beyondJsKernel010Bundle) {
+      dependency_0 = _beyondJsKernel010Bundle;
+    }, function (_beyondJsKernel010Transversals) {
+      dependency_1 = _beyondJsKernel010Transversals;
+    }, function (_beyondJsWidgets010Render) {
+      dependency_2 = _beyondJsWidgets010Render;
+    }],
+    execute: function () {
+      ({
+        Transversal
+      } = brequire('@beyond-js/kernel/transversals'));
 
-  bundles.set({
-    "module": "@beyond-examples/ssr/unnamed/routing",
-    "bundle": "start"
-  }, function (ims, exports) {
-    /*************************
-    INTERNAL MODULE: ./routing
-    *************************/
-    ims.set('./routing', {
-      hash: 3204864713,
-      creator: function (require, exports) {
-        "use strict";
+      _export("__beyond_transversal", __beyond_transversal = new Transversal('start', ''));
 
-        var _routing = require("@beyond-js/kernel/routing");
+      __beyond_transversal.dependencies.update([['@beyond-js/kernel/transversals', dependency_1], ['@beyond-js/widgets/render', dependency_2]]);
+      /*************
+      BUNDLE: WIDGET
+      *************/
 
-        _routing.routing.redirect = async function redirect(uri) {
-          return uri.pathname;
-        };
 
-        _routing.routing.setup();
-      }
-    });
-  });
-  transversal.initialise(bundles);
+      ({
+        widgets
+      } = brequire('@beyond-js/widgets/render'));
+      widgets.register([{
+        "name": "home-page",
+        "vspecifier": "@beyond-examples/ssr@0.0.1/home",
+        "is": "page",
+        "route": "/"
+      }, {
+        "name": "entries-ssr-page",
+        "vspecifier": "@beyond-examples/ssr@0.0.1/entries-ssr",
+        "is": "page",
+        "render": {
+          "csr": false,
+          "ssr": true
+        },
+        "route": "/entries-ssr"
+      }]);
+      bundles = [];
+
+      __beyond_transversal.initialise(bundles);
+    }
+  };
 });

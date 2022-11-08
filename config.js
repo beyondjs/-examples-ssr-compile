@@ -1,22 +1,22 @@
-define(["exports"], function (_exports) {
+System.register([], function (_export, _context) {
   "use strict";
 
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-  var _default = {
-    "package": "@beyond-examples/ssr",
-    "version": "0.0.1",
-    "languages": {
-      "default": "en",
-      "supported": ["en", "es"]
-    },
-    "local": "web",
-    "ssr": {
-      "host": "https://beyond-examples-ssr.herokuapp.com",
-      "local": "ssr"
+  return {
+    setters: [],
+    execute: function () {
+      _export("default", {
+        "package": "@beyond-examples/ssr",
+        "version": "0.0.1",
+        "languages": {
+          "default": "en",
+          "supported": ["en", "es"]
+        },
+        "params": {},
+        "ssr": {
+          "host": "https://beyond-examples-ssr.herokuapp.com"
+        },
+        "backend": {}
+      });
     }
   };
-  _exports.default = _default;
 });
