@@ -2177,7 +2177,7 @@ var require_react = __commonJS({
     }
   }
 
-}); // .beyond/uimport/temp/react.18.2.0.js
+}); // .beyond/uimport/react.18.2.0.js
 
 
 var react_18_2_0_exports = {};

@@ -1,9 +1,9 @@
 System.register(["@beyond-js/kernel@0.1.0/bundle"], function (_export, _context) {
   "use strict";
 
-  var dependency_0, bimport, __Bundle, __pkg, ims, EntriesBridge, __beyond_pkg, hmr;
+  var dependency_0, bimport, __Bundle, __pkg, ims, Entries, __beyond_pkg, hmr;
 
-  _export("EntriesBridge", void 0);
+  _export("Entries", void 0);
 
   return {
     setters: [function (_beyondJsKernel010Bundle) {
@@ -11,7 +11,7 @@ System.register(["@beyond-js/kernel@0.1.0/bundle"], function (_export, _context)
     }],
     execute: function () {
       bimport = specifier => {
-        const dependencies = new Map([["react", "18.2.0"], ["react-dom", "18.2.0"], ["socket.io", "4.5.3"], ["socket.io-client", "4.5.3"], ["cheerio", "1.0.0-rc.12"], ["@beyond-js/kernel", "0.1.0"], ["@beyond-js/backend", "0.1.0"], ["@beyond-js/ssr", "0.1.0"], ["@beyond-js/widgets", "0.1.0"], ["@beyond-js/react-widgets", "18.20.1"], ["@beyond-examples/ssr", "0.0.1"], ["@beyond-examples/ssr", "0.0.1"]]);
+        const dependencies = new Map([["socket.io", "4.5.3"], ["socket.io-client", "4.5.3"], ["cheerio", "1.0.0-rc.12"], ["@beyond-js/kernel", "0.1.0"], ["@beyond-js/backend", "0.1.0"], ["@beyond-js/ssr", "0.1.0"], ["@beyond-js/widgets", "0.1.0"], ["@beyond-js/react-widgets", "18.20.1"], ["@beyond-examples/ssr", "0.0.1"], ["@beyond-examples/ssr", "0.0.1"]]);
         return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
       };
 
@@ -34,37 +34,43 @@ System.register(["@beyond-js/kernel@0.1.0/bundle"], function (_export, _context)
       ***********************/
 
       ims.set('./index', {
-        hash: 2199010481,
+        hash: 4264566612,
         creator: function (require, exports) {
           "use strict";
 
           Object.defineProperty(exports, "__esModule", {
             value: true
           });
-          exports.EntriesBridge = void 0;
+          exports.Entries = void 0;
           /*bundle*/
 
-          class EntriesBridge {
+          class Entries {
             async fetch() {
-              await new Promise(resolve => setTimeout(resolve, 1000));
+              await new Promise(resolve => setTimeout(resolve, 2000));
               return [{
                 id: 1,
-                name: 'Pepsi'
+                name: 'Argentina'
               }, {
                 id: 2,
-                name: 'Coca Cola'
+                name: 'Brasil'
+              }, {
+                id: 3,
+                name: 'Ecuador'
+              }, {
+                id: 4,
+                name: 'Uruguay'
               }];
             }
 
           }
 
-          exports.EntriesBridge = EntriesBridge;
+          exports.Entries = Entries;
         }
       });
       __pkg.exports.descriptor = [{
         "im": "./index",
-        "from": "EntriesBridge",
-        "name": "EntriesBridge"
+        "from": "Entries",
+        "name": "Entries"
       }];
 
       // Module exports
@@ -73,7 +79,7 @@ System.register(["@beyond-js/kernel@0.1.0/bundle"], function (_export, _context)
         prop,
         value
       }) {
-        (require || prop === 'EntriesBridge') && _export("EntriesBridge", EntriesBridge = require ? require('./index').EntriesBridge : value);
+        (require || prop === 'Entries') && _export("Entries", Entries = require ? require('./index').Entries : value);
       };
 
       _export("__beyond_pkg", __beyond_pkg = __pkg);
@@ -88,4 +94,4 @@ System.register(["@beyond-js/kernel@0.1.0/bundle"], function (_export, _context)
     }
   };
 });
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7VUFBTzs7VUFBVSxNQUNYQSxhQURXLENBQ0U7WUFDSixNQUFMQyxLQUFLO2NBQ1AsTUFBTSxJQUFJQyxPQUFKLENBQVlDLE9BQU8sSUFBSUMsVUFBVSxDQUFDRCxPQUFELEVBQVUsSUFBVixDQUFqQyxDQUFOO2NBRUEsT0FBTyxDQUFDO2dCQUNKRSxFQUFFLEVBQUUsQ0FEQTtnQkFFSkMsSUFBSSxFQUFFO2NBRkYsQ0FBRCxFQUdKO2dCQUNDRCxFQUFFLEVBQUUsQ0FETDtnQkFFQ0MsSUFBSSxFQUFFO2NBRlAsQ0FISSxDQUFQO1lBT0g7O1VBWGMiLCJuYW1lcyI6WyJFbnRyaWVzQnJpZGdlIiwiZmV0Y2giLCJQcm9taXNlIiwicmVzb2x2ZSIsInNldFRpbWVvdXQiLCJpZCIsIm5hbWUiXSwic291cmNlUm9vdCI6Ii8iLCJzb3VyY2VzIjpbInByb2plY3QvbW9kdWxlcy9hcGkvdHMvaW5kZXgudHMiXSwic291cmNlc0NvbnRlbnQiOltudWxsXX0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7VUFBTzs7VUFBVSxNQUNYQSxPQURXLENBQ0o7WUFDRSxNQUFMQyxLQUFLO2NBQ1AsTUFBTSxJQUFJQyxPQUFKLENBQVlDLE9BQU8sSUFBSUMsVUFBVSxDQUFDRCxPQUFELEVBQVUsSUFBVixDQUFqQyxDQUFOO2NBRUEsT0FBTyxDQUNIO2dCQUNJRSxFQUFFLEVBQUUsQ0FEUjtnQkFFSUMsSUFBSSxFQUFFO2NBRlYsQ0FERyxFQUtIO2dCQUNJRCxFQUFFLEVBQUUsQ0FEUjtnQkFFSUMsSUFBSSxFQUFFO2NBRlYsQ0FMRyxFQVNIO2dCQUNJRCxFQUFFLEVBQUUsQ0FEUjtnQkFFSUMsSUFBSSxFQUFFO2NBRlYsQ0FURyxFQWFIO2dCQUNJRCxFQUFFLEVBQUUsQ0FEUjtnQkFFSUMsSUFBSSxFQUFFO2NBRlYsQ0FiRyxDQUFQO1lBa0JIOztVQXRCUSIsIm5hbWVzIjpbIkVudHJpZXMiLCJmZXRjaCIsIlByb21pc2UiLCJyZXNvbHZlIiwic2V0VGltZW91dCIsImlkIiwibmFtZSJdLCJzb3VyY2VSb290IjoiLyIsInNvdXJjZXMiOlsicHJvamVjdC9tb2R1bGVzL2FwaS90cy9pbmRleC50cyJdLCJzb3VyY2VzQ29udGVudCI6W251bGxdfQ==

@@ -103,7 +103,7 @@ var require_client = __commonJS({
     var i;
   }
 
-}); // .beyond/uimport/temp/react-dom/client.18.2.0.js
+}); // .beyond/uimport/react-dom/client.18.2.0.js
 
 
 var client_18_2_0_exports = {};

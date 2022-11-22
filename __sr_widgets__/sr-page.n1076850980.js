@@ -1,0 +1,1 @@
+{"html":"<link href=\"##_!@beyond-examples/ssr!_##global.css\" rel=\"stylesheet\"/><link href=\"##_!@beyond-examples/ssr@0.0.1!_##sr.css\" rel=\"stylesheet\"/><div class=\"page-container\"><h2>Im a page with static rendering.</h2>URL parameter: example</div>"}

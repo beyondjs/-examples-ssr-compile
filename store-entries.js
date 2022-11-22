@@ -17,7 +17,7 @@ System.register(["@beyond-js/kernel@0.1.0/bundle", "@beyond-js/kernel@0.1.0/core
     }],
     execute: function () {
       bimport = specifier => {
-        const dependencies = new Map([["react", "18.2.0"], ["react-dom", "18.2.0"], ["socket.io", "4.5.3"], ["socket.io-client", "4.5.3"], ["cheerio", "1.0.0-rc.12"], ["@beyond-js/kernel", "0.1.0"], ["@beyond-js/backend", "0.1.0"], ["@beyond-js/ssr", "0.1.0"], ["@beyond-js/widgets", "0.1.0"], ["@beyond-js/react-widgets", "18.20.1"], ["@beyond-examples/ssr", "0.0.1"], ["@beyond-examples/ssr", "0.0.1"]]);
+        const dependencies = new Map([["socket.io", "4.5.3"], ["socket.io-client", "4.5.3"], ["cheerio", "1.0.0-rc.12"], ["@beyond-js/kernel", "0.1.0"], ["@beyond-js/backend", "0.1.0"], ["@beyond-js/ssr", "0.1.0"], ["@beyond-js/widgets", "0.1.0"], ["@beyond-js/react-widgets", "18.20.1"], ["@beyond-examples/ssr", "0.0.1"], ["@beyond-examples/ssr", "0.0.1"]]);
         return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
       };
 
@@ -40,7 +40,7 @@ System.register(["@beyond-js/kernel@0.1.0/bundle", "@beyond-js/kernel@0.1.0/core
       ***********************/
 
       ims.set('./store', {
-        hash: 2290000723,
+        hash: 1456733888,
         creator: function (require, exports) {
           "use strict";
 
@@ -56,7 +56,7 @@ System.register(["@beyond-js/kernel@0.1.0/bundle", "@beyond-js/kernel@0.1.0/core
 
 
           class Store extends _core.Events {
-            #provider = new _api.EntriesBridge();
+            #provider = new _api.Entries();
             #loading = false;
 
             get loading() {
@@ -82,6 +82,7 @@ System.register(["@beyond-js/kernel@0.1.0/bundle", "@beyond-js/kernel@0.1.0/core
             }
 
             async fetch() {
+              console.log(`fetch: ${this.#loaded}`);
               this.#loading = true;
               this.trigger('change');
               this.#value.length = 0;
@@ -90,6 +91,7 @@ System.register(["@beyond-js/kernel@0.1.0/bundle", "@beyond-js/kernel@0.1.0/core
               this.#loading = false;
               this.#loaded = true;
               this.trigger('change');
+              console.log(`fetch: ${this.#loaded}`);
             }
 
             hydrate(cached) {
@@ -101,6 +103,7 @@ System.register(["@beyond-js/kernel@0.1.0/bundle", "@beyond-js/kernel@0.1.0/core
             }
 
             toJSON() {
+              console.log('toJSON', this.#value);
               return this.#value;
             }
 
@@ -136,4 +139,4 @@ System.register(["@beyond-js/kernel@0.1.0/bundle", "@beyond-js/kernel@0.1.0/core
     }
   };
 });
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O1VBQUE7O1VBRUE7VUFPTzs7O1VBQVUsTUFDWEEsS0FEVyxTQUNHQyxZQURILENBQ1M7WUFDdEIsWUFBWSxJQUFJQyxrQkFBSixFQUFaO1lBRUEsV0FBVyxLQUFYOztZQUNXLElBQVBDLE9BQU87Y0FDUCxPQUFPLEtBQUssUUFBWjtZQUNIOztZQUVELFVBQVUsS0FBVjs7WUFDVSxJQUFOQyxNQUFNO2NBQ04sT0FBTyxLQUFLLE9BQVo7WUFDSDs7WUFFRCxTQUFxQixFQUFyQjs7WUFDUyxJQUFMQyxLQUFLO2NBQ0wsT0FBTyxLQUFLLE1BQVo7WUFDSDs7WUFFRCxZQUFZLEtBQVo7O1lBQ1ksSUFBUkMsUUFBUTtjQUNSLE9BQU8sS0FBSyxTQUFaO1lBQ0g7O1lBRVUsTUFBTEMsS0FBSztjQUNQLEtBQUssUUFBTCxHQUFnQixJQUFoQjtjQUNBLEtBQUtDLE9BQUwsQ0FBYSxRQUFiO2NBRUEsS0FBSyxNQUFMLENBQVlDLE1BQVosR0FBcUIsQ0FBckI7Y0FDQSxNQUFNQyxPQUFPLEdBQUcsTUFBTSxLQUFLLFNBQUwsQ0FBZUgsS0FBZixFQUF0QjtjQUNBRyxPQUFPLENBQUNDLE9BQVJELENBQWdCRSxLQUFLLElBQUksS0FBSyxNQUFMLENBQVlDLElBQVosQ0FBaUJELEtBQWpCLENBQXpCRjtjQUVBLEtBQUssUUFBTCxHQUFnQixLQUFoQjtjQUNBLEtBQUssT0FBTCxHQUFlLElBQWY7Y0FDQSxLQUFLRixPQUFMLENBQWEsUUFBYjtZQUNIOztZQUVETSxPQUFPLENBQUNDLE1BQUQsRUFBbUI7Y0FDdEJDLE9BQU8sQ0FBQ0MsR0FBUkQsQ0FBWSxTQUFaQSxFQUF1QkQsTUFBdkJDO2NBQ0EsS0FBSyxRQUFMLEdBQWdCLEtBQWhCO2NBQ0EsS0FBSyxPQUFMLEdBQWUsSUFBZjtjQUNBRCxNQUFNLENBQUNKLE9BQVBJLENBQWVMLE9BQU8sSUFBSSxLQUFLLE1BQUwsQ0FBWUcsSUFBWixDQUFpQkgsT0FBakIsQ0FBMUJLO2NBQ0EsS0FBSyxTQUFMLEdBQWlCLElBQWpCO1lBQ0g7O1lBRURHLE1BQU07Y0FDRixPQUFPLEtBQUssTUFBWjtZQUNIOztVQTlDcUIiLCJuYW1lcyI6WyJTdG9yZSIsIkV2ZW50cyIsIkVudHJpZXNCcmlkZ2UiLCJsb2FkaW5nIiwibG9hZGVkIiwidmFsdWUiLCJoeWRyYXRlZCIsImZldGNoIiwidHJpZ2dlciIsImxlbmd0aCIsImVudHJpZXMiLCJmb3JFYWNoIiwiZW50cnkiLCJwdXNoIiwiaHlkcmF0ZSIsImNhY2hlZCIsImNvbnNvbGUiLCJsb2ciLCJ0b0pTT04iXSwic291cmNlUm9vdCI6Ii8iLCJzb3VyY2VzIjpbInByb2plY3QvbW9kdWxlcy9zdG9yZS90cy9zdG9yZS50cyJdLCJzb3VyY2VzQ29udGVudCI6W251bGxdfQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O1VBQUE7O1VBRUE7VUFPTzs7O1VBQVUsTUFDWEEsS0FEVyxTQUNHQyxZQURILENBQ1M7WUFDdEIsWUFBWSxJQUFJQyxZQUFKLEVBQVo7WUFFQSxXQUFXLEtBQVg7O1lBQ1csSUFBUEMsT0FBTztjQUNQLE9BQU8sS0FBSyxRQUFaO1lBQ0g7O1lBRUQsVUFBVSxLQUFWOztZQUNVLElBQU5DLE1BQU07Y0FDTixPQUFPLEtBQUssT0FBWjtZQUNIOztZQUVELFNBQXFCLEVBQXJCOztZQUNTLElBQUxDLEtBQUs7Y0FDTCxPQUFPLEtBQUssTUFBWjtZQUNIOztZQUVELFlBQVksS0FBWjs7WUFDWSxJQUFSQyxRQUFRO2NBQ1IsT0FBTyxLQUFLLFNBQVo7WUFDSDs7WUFFVSxNQUFMQyxLQUFLO2NBQ1BDLE9BQU8sQ0FBQ0MsR0FBUkQsQ0FBWSxVQUFVLEtBQUssT0FBTyxFQUFsQ0E7Y0FDQSxLQUFLLFFBQUwsR0FBZ0IsSUFBaEI7Y0FDQSxLQUFLRSxPQUFMLENBQWEsUUFBYjtjQUVBLEtBQUssTUFBTCxDQUFZQyxNQUFaLEdBQXFCLENBQXJCO2NBQ0EsTUFBTUMsT0FBTyxHQUFHLE1BQU0sS0FBSyxTQUFMLENBQWVMLEtBQWYsRUFBdEI7Y0FDQUssT0FBTyxDQUFDQyxPQUFSRCxDQUFnQkUsS0FBSyxJQUFJLEtBQUssTUFBTCxDQUFZQyxJQUFaLENBQWlCRCxLQUFqQixDQUF6QkY7Y0FFQSxLQUFLLFFBQUwsR0FBZ0IsS0FBaEI7Y0FDQSxLQUFLLE9BQUwsR0FBZSxJQUFmO2NBQ0EsS0FBS0YsT0FBTCxDQUFhLFFBQWI7Y0FDQUYsT0FBTyxDQUFDQyxHQUFSRCxDQUFZLFVBQVUsS0FBSyxPQUFPLEVBQWxDQTtZQUNIOztZQUVEUSxPQUFPLENBQUNDLE1BQUQsRUFBbUI7Y0FDdEJULE9BQU8sQ0FBQ0MsR0FBUkQsQ0FBWSxTQUFaQSxFQUF1QlMsTUFBdkJUO2NBQ0EsS0FBSyxRQUFMLEdBQWdCLEtBQWhCO2NBQ0EsS0FBSyxPQUFMLEdBQWUsSUFBZjtjQUNBUyxNQUFNLENBQUNKLE9BQVBJLENBQWVMLE9BQU8sSUFBSSxLQUFLLE1BQUwsQ0FBWUcsSUFBWixDQUFpQkgsT0FBakIsQ0FBMUJLO2NBQ0EsS0FBSyxTQUFMLEdBQWlCLElBQWpCO1lBQ0g7O1lBRURDLE1BQU07Y0FDRlYsT0FBTyxDQUFDQyxHQUFSRCxDQUFZLFFBQVpBLEVBQXNCLEtBQUssTUFBM0JBO2NBQ0EsT0FBTyxLQUFLLE1BQVo7WUFDSDs7VUFqRHFCIiwibmFtZXMiOlsiU3RvcmUiLCJFdmVudHMiLCJFbnRyaWVzIiwibG9hZGluZyIsImxvYWRlZCIsInZhbHVlIiwiaHlkcmF0ZWQiLCJmZXRjaCIsImNvbnNvbGUiLCJsb2ciLCJ0cmlnZ2VyIiwibGVuZ3RoIiwiZW50cmllcyIsImZvckVhY2giLCJlbnRyeSIsInB1c2giLCJoeWRyYXRlIiwiY2FjaGVkIiwidG9KU09OIl0sInNvdXJjZVJvb3QiOiIvIiwic291cmNlcyI6WyJwcm9qZWN0L21vZHVsZXMvc3RvcmUvdHMvc3RvcmUudHMiXSwic291cmNlc0NvbnRlbnQiOltudWxsXX0=

@@ -58,7 +58,7 @@ var __toCommonJS = /* @__PURE__ */(cache => {
   return (module2, temp) => {
     return cache && cache.get(module2) || (temp = __reExport(__markAsModule({}), module2, 1), cache && cache.set(module2, temp), temp);
   };
-})(typeof WeakMap !== "undefined" ? /* @__PURE__ */new WeakMap() : 0); // .beyond/uimport/temp/@beyond-js/react-widgets/base.18.20.1.js
+})(typeof WeakMap !== "undefined" ? /* @__PURE__ */new WeakMap() : 0); // .beyond/uimport/@beyond-js/react-widgets/base.18.20.1.js
 
 
 var base_18_20_1_exports = {};
